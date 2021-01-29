@@ -1,0 +1,68 @@
+{
+  "name": "vue-date-input",
+  "version": "0.1.0",
+  "description": "An easy masked date input field which works on all browsers. No need for those user unfriendly date pickers anymore.",
+  "keywords": [
+    "vue simple date input",
+    "vue mask date input",
+    "vue date input",
+    "vue input date",
+    "vue date picker",
+    "vue date picker field",
+    "vue birthdate",
+    "vue date of birth",
+    "vue",
+    "vue.js",
+    "vue input",
+  ],
+  "author": "Pascal van Gemert <pascal@pascalvangemert.nl>",
+  "private": false,
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pascalvgemert/vue-date-input.git"
+  },
+  "main": "dist/vue-date-input.umd.js",
+  "module": "dist/vue-date-input.esm.js",
+  "unpkg": "dist/vue-date-input.min.js",
+  "browser": {
+    "./sfc": "src/vue-date-input.vue"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "attributes.json",
+    "tags.json"
+  ],
+  "vetur": {
+    "tags": "tags.json",
+    "attributes": "attributes.json"
+  },
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/vue-simple-validator.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/vue-simple-validator.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/vue-simple-validator.min.js",
+    "prebuild": "npm run test",
+    "pretest": "",
+    "test": ""
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.3",
+    "@rollup/plugin-babel": "^5.0.3",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "cross-env": "^5.2.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.14.4",]
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
